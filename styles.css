@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #D5D5D5;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+main {
+    padding: 20px;
+    border-radius: 10%;
+}
+
+.section-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: 2%;
+}
+
+/* Estilos de la sección 1 */
+.texto-encriptar {
+    margin-bottom: 20px;
+    
+}
+
+.caja-texto {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.especificaciones {
+    display: flex;
+    align-items: center;
+    font-size: xx-small;
+    margin: 10%;
+}
+
+.especificaciones img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.boton-encriptar,
+.boton-desencriptar,
+.boton-copiar {
+    background-color: #0a5586;
+    color: #ffffff;
+    padding: 3.14%;
+    border: none;
+    border-radius: 8%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-encriptar:hover,
+.boton-desencriptar:hover,
+.boton-copiar:hover {
+    background-color: #1e71dd;
+}
+
+/* Estilos de la sección 2 */
+.search-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-image img {
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    max-width: 200px; /* Pero se limita su tamaño máximo a 200px */
+}
+
+.mono {
+    width: 50px;
+}
+
+.texto-encriptado {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.texto-encriptado.mostrar {
+    opacity: 1;
+}
+
+.resultado {
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.texto-resultado {
+    color: #555555;
+}
+
+.copiar {
+    text-align: center;
+}
+
+/* Animaciones */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.5s ease forwards;
+}
+
+.scale {
+    animation: scale 0.3s ease-in-out infinite alternate;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .section-container {
+        margin-bottom: 10px;
+    }
+
+    .caja-texto {
+        padding: 5px;
+    }
+
+    .especificaciones {
+        margin: 5%;
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar,
+    .boton-copiar {
+        padding: 2%;
+    }
+
+    .search-image img {
+        max-width: 150px;
+    }
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="media/Logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img class="logo" src="media/Logo.svg" alt="logo">
+    </header>
+    <main>
+        <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+        <section class="section-container sec1">
+            <div class="texto-encriptar">
+                <textarea 
+                id="texto" 
+                name="texto" 
+                rows="10" 
+                cols="50" 
+                placeholder="Ingrese el texto aquí"
+                class="caja-texto"></textarea><br>
+            </div>
+            
+            <div class="botones">
+                <div class="especificaciones">
+                    <img src="media/megafono.svg" alt="megáfono">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <input class="boton-encriptar" type="button" onclick="encriptar()" value="Encriptar">
+                <input class="boton-desencriptar" type="button" onclick="desencriptar()" value="Desencriptar">
+            </div>
+        </section>
+        <section class="section-container sec2">
+            <div class="search-image" id="searchImage">
+                <img class="mono"  src="media/buscar.svg">
+            </div>
+            <div class="resultado">
+                <p class="texto-resultado"></p>
+            </div>
+            <div class="copiar">
+                <input type="button" class="boton-copiar" value="Copiar">
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
